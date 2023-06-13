@@ -20,7 +20,7 @@ public class SlothDisplayApplication {
 
 	@GetMapping("/")
 	public String sayHello() {
-		return "Type sloth or sloth<number> to see sloth image!";
+		return "Type sloth or slothnumber to see sloth image!";
 	}	@GetMapping(value = "/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
 	public Resource getImage(@PathVariable String imageName) {
 		return new ClassPathResource("static/" + imageName + ".jpg");
