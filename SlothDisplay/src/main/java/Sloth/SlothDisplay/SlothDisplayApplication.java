@@ -11,10 +11,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
+@RestController
 public class SlothDisplayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SlothDisplayApplication.class, args);
+	}
+
+	@GetMapping("/")
+	public String sayHello() {
+		return "Hello, World!";
 	}
 
 }
